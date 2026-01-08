@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Phone, MapPin, Instagram } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 import Image from "next/image";
 
 const FourAthIcon = () => (
@@ -46,14 +46,6 @@ const LeafDivider = () => (
     className="w-full h-auto"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path
-      d="M10,10 H190"
-      stroke="black"
-      strokeWidth="1"
-      fill="none"
-      strokeDasharray="4 4"
-      strokeOpacity="0"
-    />
     <g transform="translate(100, 10) scale(0.8)">
       <path
         d="M-80,0 C-40,-15 40,-15 80,0"
@@ -75,7 +67,6 @@ const LeafDivider = () => (
   </svg>
 );
 
-
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-gray-100 p-4">
@@ -88,32 +79,30 @@ export default function Home() {
               <LeafDivider />
             </div>
           </div>
-          <div className="mt-6 flex flex-col space-y-4">
-            <div className="flex items-center justify-between gap-4">
-                <div className="flex flex-col items-center">
-                    <Image
-                        src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://www.instagram.com/4arthofficial&color=000000&bgcolor=FFFFFF&qzone=1"
-                        alt="QR code for 4ARTHOFFICIAL Instagram"
-                        width={100}
-                        height={100}
-                    />
-                    <p className="mt-2 text-xs font-mono">@4ARTHOFFICIAL</p>
-                </div>
+          <div className="mt-4 flex items-center justify-between gap-4">
+              <div className="flex flex-col items-center text-center">
+                  <Image
+                      src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://www.instagram.com/4arthofficial&color=000000&bgcolor=FFFFFF&qzone=1"
+                      alt="QR code for 4ARTHOFFICIAL Instagram"
+                      width={100}
+                      height={100}
+                  />
+                  <p className="mt-2 text-xs font-mono">@4ARTHOFFICIAL</p>
+              </div>
 
-                <div className="space-y-2 text-xs text-right">
-                    <div className="flex items-center justify-end gap-2">
-                        <div>
-                            <p>+91-9560104470</p>
-                            <p>+91-8373931342</p>
-                        </div>
-                        <Phone className="h-4 w-4 flex-shrink-0" />
-                    </div>
-                    <div className="flex items-start justify-end gap-2">
-                        <p className="max-w-[150px]">D 35/724 100 futa road Chhatarpur -110074 near, Dhanmill</p>
-                        <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5" />
-                    </div>
-                </div>
-            </div>
+              <div className="flex flex-col text-right text-xs space-y-2">
+                  <div className="flex items-center justify-end gap-2">
+                      <div className="font-semibold">
+                          <p>+91-9560104470</p>
+                          <p>+91-8373931342</p>
+                      </div>
+                      <Phone className="h-4 w-4 flex-shrink-0" />
+                  </div>
+                  <div className="flex items-start justify-end gap-2">
+                      <p className="max-w-[150px]">D 35/724 100 futa road Chhatarpur -110074 near, Dhanmill</p>
+                      <MapPin className="h-4 w-4 flex-shrink-0 mt-0.5" />
+                  </div>
+              </div>
           </div>
         </CardContent>
       </Card>
