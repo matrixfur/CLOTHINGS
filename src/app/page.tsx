@@ -1,11 +1,15 @@
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main>
-      <div style={{ padding: '2rem', backgroundColor: 'white', color: 'black' }}>
-        <h1>This page should be visible.</h1>
-        <p>If you can see this text, we have fixed the rendering issue.</p>
-      </div>
+    <main className="flex min-h-screen flex-col items-center justify-center bg-background p-24">
+      <Image
+        src="/box-image.jpg"
+        alt="Kraft Box"
+        width={800}
+        height={800}
+        priority
+      />
     </main>
   );
 }
